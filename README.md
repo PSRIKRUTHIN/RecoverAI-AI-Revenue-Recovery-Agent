@@ -658,8 +658,9 @@ RecoverAI is currently a demonstration system. A production version could be ext
 - 🗄️ Persistent databases for recovery history and audit events
 - 🤖 More specialized recovery agents for different payment channels
 - 🌍 Production-grade multi-currency and regional recovery support
----
 
+
+---
 
 # ⚠️ Demo Disclaimer
 
