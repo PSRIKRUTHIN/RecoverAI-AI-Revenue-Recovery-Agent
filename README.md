@@ -50,13 +50,12 @@ Recovery / PTP / Escalation
        ↓
 Audit Trail
 
-## Run Locally
+## ⚙️ Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+### 1. Clone the repository
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+git clone https://github.com/PSRIKRUTHIN/RecoverAI-AI-Revenue-Recovery-Agent.git
+cd RecoverAI-AI-Revenue-Recovery-Agent
