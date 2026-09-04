@@ -9,7 +9,7 @@
 ## 🌐 Live Demo
 
 **Live Application:**  
-`https://recover-ai-ai-revenue-recovery-agen.vercel.app`
+https://recover-ai-ai-revenue-recovery-agen.vercel.app/
 
 ---
 
