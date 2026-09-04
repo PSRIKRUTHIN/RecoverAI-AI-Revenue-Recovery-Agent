@@ -1,38 +1,45 @@
-# RecoverAI — AI Revenue Recovery Agent
+# 🚀 RecoverAI — AI Revenue Recovery Agent
 
 > An AI-powered revenue recovery agent that detects revenue at risk, diagnoses failure causes, selects the right intervention, and executes bounded recovery workflows with deterministic safety controls.
 
 **Built for Razorpay AI Builder Internship 2026 — Track 03: AI Revenue Recovery**
 
-## 🚀 Live Demo
+---
 
-👉 https://recover-ai-ai-revenue-recovery-agen.vercel.app/
+## 🌐 Live Demo
 
-## 💻 Start the Development Server (Local Host)
+**Live Application:**  
+`https://recover-ai-ai-revenue-recovery-agen.vercel.app`
 
-```bash
-npm run dev
-🎯 What is RecoverAI?
+---
 
-Failed payments and delayed receivables create revenue leakage for businesses.
+## 🎯 What is RecoverAI?
 
-RecoverAI acts as an AI-assisted revenue recovery agent that:
+Failed payments and delayed receivables create significant revenue leakage for businesses.
 
-Detects revenue-risk incidents
-Diagnoses the root cause
-Determines the most appropriate intervention
-Executes bounded recovery actions
-Creates Promise-to-Pay commitments when appropriate
-Stops unsafe or exhausted recovery attempts
-Escalates cases requiring manual intervention
-Records recovery decisions through an audit trail
-Measures actual recovery outcomes
+**RecoverAI** is an AI-assisted revenue recovery agent designed to identify revenue-risk incidents, understand their causes, recommend suitable recovery actions, and execute only those actions permitted by deterministic safety controls.
 
-The system is designed around one principle:
+### RecoverAI can:
 
-AI reasons about recovery. Deterministic controls decide what the agent is allowed to execute.
+- 🔍 Detect revenue-risk incidents
+- 🧠 Diagnose the root cause of payment failures
+- 🎯 Select the most appropriate recovery intervention
+- ⚙️ Execute bounded recovery actions
+- 🤝 Create Promise-to-Pay commitments
+- 🛑 Stop unsafe or exhausted recovery attempts
+- 👨‍💼 Escalate cases requiring manual intervention
+- 📋 Maintain a complete audit trail
+- 📊 Measure recovery outcomes
 
-🧠 How It Works
+### Core Design Principle
+
+> **AI reasons about recovery. Deterministic controls decide what the agent is allowed to execute.**
+
+---
+
+# 🧠 How It Works
+
+```text
 Revenue Incident
        ↓
 Risk Detection
@@ -46,242 +53,359 @@ Deterministic Safety Engine
        ↓
 Bounded Intervention
        ↓
-┌──────────────┬──────────────┬──────────────┐
-│ Payment      │ Promise-to-  │ Stop /       │
-│ Retry        │ Pay (PTP)    │ Escalate     │
-└──────────────┴──────────────┴──────────────┘
+┌─────────────────────────────────┐
+│ Payment Retry │ PTP │ Escalate │
+└─────────────────────────────────┘
        ↓
 Audit Trail
        ↓
 Recovery Metrics
-📊 Recovery Metrics
+```
 
-RecoverAI tracks recovery performance across monitored revenue-risk incidents, including:
+---
 
-Revenue recovered
-Recovery rate
-Recovered accounts
-Active revenue exposure
-Promise-to-Pay commitments
-Committed recovery coverage
-High-risk cases stopped
-Protected exposure
+# 🏗️ System Architecture
 
-All payment execution shown in the demo is simulated.
+```text
+┌──────────────────────────┐
+│    Revenue Incidents     │
+│ Payments / B2B / UPI     │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│      Risk Detection      │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│      AI Diagnosis        │
+│    Groq GPT-OSS-20B      │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│    Recovery Decision     │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│ Deterministic Safety     │
+│        Engine             │
+│                          │
+│ • Retry limits           │
+│ • Duplicate prevention   │
+│ • Hard-decline stopping  │
+│ • Risk escalation        │
+│ • Audit logging          │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│    Recovery Actions      │
+│                          │
+│ • Payment Retry           │
+│ • Promise-to-Pay          │
+│ • Credential Update       │
+│ • Stop & Escalate         │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│       Audit Trail        │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│    Recovery Analytics    │
+└──────────────────────────┘
+```
 
-🏗️ System Architecture
-┌──────────────────────┐
-│   Revenue Incidents  │
-│ Payments / B2B / UPI │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│    Risk Detection    │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│   Groq GPT-OSS-20B   │
-│   AI Diagnosis       │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Recovery Decision    │
-└──────────┬───────────┘
-           ↓
-┌────────────────────────────┐
-│ Deterministic Safety Engine│
-│                            │
-│ • Retry limits             │
-│ • Duplicate prevention    │
-│ • Hard-decline stopping   │
-│ • Risk escalation         │
-│ • Audit logging            │
-└──────────┬─────────────────┘
-           ↓
-┌────────────────────────────┐
-│     Recovery Actions        │
-│                            │
-│ • Payment Retry             │
-│ • Promise-to-Pay            │
-│ • Credential Update         │
-│ • Stop & Escalate           │
-└──────────┬─────────────────┘
-           ↓
-┌──────────────────────┐
-│    Audit Trail       │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│  Recovery Analytics  │
-└──────────────────────┘
-🛡️ Safety-First Recovery
+---
 
-The LLM does not have unrestricted control over recovery execution.
+# 🛡️ Safety-First Recovery
 
-The deterministic safety layer validates recovery decisions before an action is executed.
+The LLM does **not** have unrestricted control over payment execution.
 
+Instead, every AI recommendation passes through a deterministic safety layer before execution.
+
+```text
 AI Recommendation
        ↓
 Safety Validation
        ↓
-┌───────────────┐
-│ Allowed?      │
-└───────┬───────┘
-        │
-   ┌────┴────┐
-   ↓         ↓
- YES         NO
-   ↓         ↓
-Execute    Stop /
-Action     Escalate
-   ↓
+    Allowed?
+     /     \
+   YES      NO
+    ↓       ↓
+ Execute   Stop /
+  Action   Escalate
+    ↓
 Audit Event
+```
 
-This prevents uncontrolled retries, duplicate recovery actions, and unsafe continuation of high-risk cases.
+### Safety Controls
 
-💳 Recovery Interventions
-Intervention	Purpose
-Payment Retry	Retry eligible failed payments
-Promise-to-Pay	Capture a commitment for delayed B2B receivables
-Credential Update	Request updated payment credentials
-Stop & Escalate	Safely terminate recovery when further automation is unsafe
-🤝 Promise-to-Pay (PTP)
+- Maximum retry limits
+- Duplicate action prevention
+- Hard-decline detection
+- Risk-based escalation
+- Recovery attempt tracking
+- Audit logging
+- Stopping rules
 
-For B2B receivables and delayed invoice payments, RecoverAI can create a Promise-to-Pay commitment.
+This architecture ensures that AI recommendations cannot directly bypass business or safety rules.
+
+---
+
+# 💳 Recovery Interventions
+
+| Intervention | Purpose |
+|---|---|
+| **Payment Retry** | Retry eligible failed payments |
+| **Promise-to-Pay** | Capture a future payment commitment |
+| **Credential Update** | Request updated payment credentials |
+| **Stop & Escalate** | Safely terminate automation when recovery is unsafe |
+
+---
+
+# 🤝 Promise-to-Pay
+
+For B2B receivables and delayed invoice payments, RecoverAI can create a **Promise-to-Pay (PTP)** commitment.
 
 A PTP records:
 
-Customer/account
-Outstanding amount
-Promised payment date
-Commitment status
-Recovery coverage
+- Customer/account
+- Outstanding amount
+- Promised payment date
+- Commitment status
+- Recovery coverage
 
-This allows the system to distinguish between an immediately recoverable payment and a receivable that requires a committed future payment.
+This allows the system to distinguish between immediately recoverable payments and receivables requiring a committed future payment.
 
-🔄 Mandate Retry Sequencer
+---
+
+# 🔄 Mandate Retry Sequencer
 
 The Mandate Retry Sequencer manages eligible recurring-payment recovery attempts.
 
-It provides:
+### Features
 
-Bounded retry attempts
-Retry scheduling
-Retry status tracking
-Failure reason handling
-Stopping rules
-Audit events
+- Bounded retry attempts
+- Retry scheduling
+- Retry status tracking
+- Failure reason handling
+- Stopping rules
+- Audit events
 
-The sequencer prevents the agent from repeatedly attempting the same failed payment beyond the configured limit.
+The sequencer prevents the system from repeatedly attempting the same failed payment beyond the configured limit.
 
-📋 Audit Trail
+---
 
-Every important recovery decision and execution event is recorded in the audit trail.
+# 📋 Audit Trail
 
-Typical events include:
+Every important recovery decision and execution event is recorded.
 
-Risk detected
-AI diagnosis
-Recovery decision
-Retry attempted
-PTP created
-Recovery succeeded
-Recovery stopped
-Case escalated
+### Example Events
 
-This makes the recovery workflow explainable and traceable.
+```text
+Risk Detected
+     ↓
+AI Diagnosis
+     ↓
+Recovery Decision
+     ↓
+Safety Validation
+     ↓
+Action Executed
+     ↓
+Recovery Outcome
+```
 
-🤖 AI Architecture
+Typical audit events include:
 
-RecoverAI uses Groq GPT-OSS-20B for AI-assisted diagnosis.
+- Risk detected
+- AI diagnosis
+- Recovery decision
+- Retry attempted
+- Promise-to-Pay created
+- Recovery succeeded
+- Recovery stopped
+- Case escalated
+
+This makes the recovery workflow **traceable and explainable**.
+
+---
+
+# 📊 Recovery Metrics
+
+RecoverAI tracks recovery performance across monitored revenue-risk incidents.
+
+### Key Metrics
+
+| Metric | Description |
+|---|---|
+| **Revenue Recovered** | Successfully recovered revenue |
+| **Recovery Rate** | Percentage of recoverable revenue recovered |
+| **Recovered Accounts** | Accounts successfully recovered |
+| **Active Revenue Exposure** | Revenue currently at risk |
+| **PTP Commitments** | Promise-to-Pay commitments |
+| **Committed Recovery Coverage** | Revenue covered by commitments |
+| **High-Risk Cases Stopped** | Cases where automation was safely stopped |
+| **Protected Exposure** | Revenue protected through controlled recovery |
+
+---
+
+# 🤖 AI Architecture
+
+RecoverAI uses **Groq GPT-OSS-20B** for AI-assisted diagnosis.
 
 The model analyzes incident context such as:
 
-Failure reason
-Payment history
-Retry count
-Customer history
-Payment channel
-Risk level
+- Failure reason
+- Payment history
+- Retry count
+- Customer history
+- Payment channel
+- Risk level
 
-The AI produces a recovery recommendation, while the deterministic safety engine controls whether that recommendation can actually be executed.
+The AI generates a recovery recommendation.
 
-🔐 AI Fallback
+However:
 
-If the Groq AI service is unavailable, RecoverAI can fall back to deterministic recovery rules.
+> **The AI does not directly execute the recommendation.**
 
-This ensures that the system remains functional without depending completely on an external LLM.
+The recommendation is passed to the deterministic safety engine, which determines whether the action is allowed.
 
-Groq GPT-OSS-20B
-       │
-       │ Available
-       ↓
-AI Diagnosis
-       │
-       ↓
-Safety Engine
+---
 
-       │
-       │ Unavailable
-       ↓
-Deterministic Rules Engine
-       │
-       ↓
-Safety Engine
-🎙️ Hinglish Voice Recovery Studio
+# 🔐 AI Fallback
 
-RecoverAI includes a Hinglish recovery communication studio for demonstrating customer-recovery conversations.
+RecoverAI includes a deterministic fallback mechanism in case the external AI service is unavailable.
+
+```text
+              ┌─────────────────┐
+              │   Groq AI       │
+              └────────┬────────┘
+                       │
+                 Available?
+                  /          \
+                YES           NO
+                 ↓             ↓
+          AI Diagnosis   Deterministic
+                              Rules
+                 \             /
+                  \           /
+                   ↓         ↓
+                Safety Engine
+                     ↓
+              Recovery Action
+```
+
+This prevents the application from becoming completely dependent on the external LLM service.
+
+---
+
+# 🎙️ Hinglish Voice Recovery Studio
+
+RecoverAI includes a simulated **Hinglish Voice Recovery Studio** for demonstrating customer-recovery conversations.
 
 It can simulate:
 
-Recovery messaging
-Payment reminders
-Promise-to-Pay conversations
-Customer responses
-Recovery outcomes
+- Recovery messaging
+- Payment reminders
+- Promise-to-Pay conversations
+- Customer responses
+- Recovery outcomes
 
-Voice interactions are simulated for demonstration purposes and do not place real customer calls.
+> **Note:** Voice interactions are simulated for demonstration purposes and do not place real customer calls.
 
-📊 Dashboard
+---
 
-The dashboard provides a centralized view of:
+# 📱 Dashboard
 
-Revenue at risk
-Active recovery cases
-Recovered revenue
-Recovery rate
-PTP commitments
-Protected exposure
-High-risk stopped cases
-Recovery queue
+The RecoverAI dashboard provides a centralized operational view of revenue recovery.
+
+### Dashboard includes:
+
+- 💰 Revenue at risk
+- 🔄 Active recovery cases
+- ✅ Recovered revenue
+- 📈 Recovery rate
+- 🤝 PTP commitments
+- 🛡️ Protected exposure
+- 🚨 High-risk stopped cases
+- 📋 Recovery queue
 
 The goal is to provide a clear operational view of where revenue is being recovered and where automation should stop.
 
-🧰 Tech Stack
+---
 
-Frontend
+# 🧩 Failure Scenarios
 
-React
-TypeScript
-Vite
+RecoverAI supports different revenue-recovery scenarios.
 
-Backend
+### Examples
 
-Node.js
-Express
+- Insufficient funds
+- Expired cards
+- Hard declines
+- Mandate failures
+- Authentication failures
+- B2B procurement holds
 
-AI
+Different failure scenarios can result in different recovery interventions.
 
-Groq
-GPT-OSS-20B
+```text
+Failure Scenario
+       ↓
+Root Cause Analysis
+       ↓
+Recovery Decision
+       ↓
+┌──────────────────────────────┐
+│ Retry                        │
+│ Promise-to-Pay               │
+│ Credential Update            │
+│ Stop & Escalate              │
+└──────────────────────────────┘
+```
 
-Tools
+---
 
-VS Code
-Git
-GitHub
-Vercel
-📁 Project Structure
+# 🌍 Multi-Currency Recovery
+
+RecoverAI supports multi-currency recovery analytics.
+
+For demonstration purposes, dashboard values can be normalized into USD-equivalent values for cross-currency aggregation.
+
+> These normalized values are used only for demonstration and analytics.
+
+---
+
+# 🧰 Tech Stack
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+
+## Backend
+
+- Node.js
+- Express
+
+## AI
+
+- Groq
+- GPT-OSS-20B
+
+## Development & Deployment
+
+- Git
+- GitHub
+- VS Code
+- Vercel
+
+---
+
+# 📁 Project Structure
+
+```text
 RecoverAI-AI-Revenue-Recovery-Agent/
 │
 ├── src/
@@ -311,6 +435,7 @@ RecoverAI-AI-Revenue-Recovery-Agent/
 │
 ├── server.ts
 ├── package.json
+├── package-lock.json
 ├── vite.config.ts
 ├── tsconfig.json
 ├── index.html
@@ -318,87 +443,209 @@ RecoverAI-AI-Revenue-Recovery-Agent/
 ├── .env.example
 ├── .gitignore
 └── README.md
-🚀 Run Locally
-Prerequisites
-Node.js 18+
-npm
-Git
-Groq API key
-1. Clone the repository
-git clone https://github.com/PSRIKRUTHIN/RecoverAI-AI-Revenue-Recovery-Agent.git
+```
+
+---
+
+# 🚀 Run Locally
+
+## Prerequisites
+
+Make sure you have:
+
+- Node.js 18+
+- npm
+- Git
+- Groq API key
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+
 cd RecoverAI-AI-Revenue-Recovery-Agent
-2. Install dependencies
+```
+
+---
+
+## 2. Install Dependencies
+
+```bash
 npm install
-3. Configure environment variables
+```
 
-Create a .env file:
+---
 
+## 3. Configure Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
 GROQ_API_KEY=your_groq_api_key
-4. Start the development server
+```
+
+> Never commit your actual API key to GitHub.
+
+---
+
+## 4. Start the Development Server
+
+```bash
 npm run dev
+```
 
-Open:
+Open the application at:
 
+```text
 http://localhost:5173
-🌐 Live Application
+```
 
-https://recover-ai-ai-revenue-recovery-agen.vercel.app/
+---
 
-🔗 Project Links
+# ⚙️ Challenges & Solutions
 
-GitHub
+## 1. Preventing Uncontrolled Retries
 
-https://github.com/PSRIKRUTHIN/RecoverAI-AI-Revenue-Recovery-Agent
-
-Live Demo
-
-https://recover-ai-ai-revenue-recovery-agen.vercel.app/
-
-⚙️ Challenges & Solutions
-Preventing uncontrolled retries
+### Challenge
 
 An early version of the recovery workflow could potentially repeat payment retries beyond the intended limit.
 
-This was addressed using deterministic retry limits and stopping rules outside the AI decision layer.
+### Solution
 
-Handling different failure scenarios
+Implemented deterministic retry limits and stopping rules outside the AI decision layer.
 
-RecoverAI handles different recovery situations such as:
+```text
+AI Recommendation
+       ↓
+Retry Eligibility
+       ↓
+Retry Limit Check
+       ↓
+Allowed?
+   /       \
+ YES        NO
+ ↓          ↓
+Retry      Stop
+```
 
-Insufficient funds
-Expired cards
-Hard declines
-Mandate failures
-Authentication failures
-B2B procurement holds
+---
 
-Different situations can result in different interventions such as retry, PTP, credential update, or escalation.
+## 2. Handling Different Failure Scenarios
 
-AI reliability
+### Challenge
 
-The AI diagnosis layer is supported by a deterministic rules fallback so that recovery logic remains available even when the LLM is unavailable.
+Different payment failures require different recovery strategies.
 
-Multi-currency recovery
+### Solution
 
-The dashboard normalizes currencies into USD-equivalent demo values for cross-currency aggregation.
+RecoverAI maps failure scenarios to bounded interventions.
 
-These values are used only for demonstration and analytics.
+Examples:
 
-⚠️ Demo Disclaimer
+```text
+Insufficient Funds
+       ↓
+Payment Retry
 
-RecoverAI is a demonstration system built for the Razorpay AI Builder Internship 2026.
 
-Payment execution is simulated.
-No real money is transferred.
-No real customer calls are placed.
-Razorpay production APIs are not used for payment execution.
-Compliance controls are illustrative and are not legal certification.
-💡 Design Principle
+Hard Decline
+       ↓
+Stop / Escalate
 
-AI should recommend recovery actions, but deterministic controls should decide what the system is allowed to execute.
 
-RecoverAI applies this principle by separating:
+Delayed B2B Invoice
+       ↓
+Promise-to-Pay
 
+
+Expired Card
+       ↓
+Credential Update
+```
+
+---
+
+## 3. AI Reliability
+
+### Challenge
+
+External AI services may become unavailable or fail to return a usable response.
+
+### Solution
+
+RecoverAI provides a deterministic rules fallback.
+
+```text
+AI Available
+     ↓
+AI Diagnosis
+     ↓
+Safety Engine
+
+
+AI Unavailable
+     ↓
+Rules Engine
+     ↓
+Safety Engine
+```
+
+This keeps the core recovery workflow operational.
+
+---
+
+## 4. Multi-Currency Analytics
+
+### Challenge
+
+Revenue may be represented in different currencies.
+
+### Solution
+
+Demo analytics normalize currencies into USD-equivalent values for cross-currency aggregation.
+
+---
+
+# 🛡️ Security & Safety
+
+RecoverAI follows a safety-first architecture.
+
+### Important controls
+
+- AI does not directly execute payments
+- Recovery actions are bounded
+- Retry attempts are limited
+- Duplicate actions are prevented
+- High-risk cases can be stopped
+- Cases can be escalated to humans
+- Recovery events are logged
+- API keys are stored through environment variables
+
+---
+
+# ⚠️ Demo Disclaimer
+
+RecoverAI is a demonstration system built for the **Razorpay AI Builder Internship 2026 — Track 03: AI Revenue Recovery**.
+
+### Important limitations
+
+- Payment execution is simulated
+- No real money is transferred
+- No real customer calls are placed
+- Razorpay production APIs are not used for payment execution
+- Compliance controls are illustrative
+- The system is not a production payment-recovery platform
+- Demo analytics may use simulated data
+
+---
+
+# 💡 Design Philosophy
+
+The central design philosophy of RecoverAI is:
+
+```text
 AI Reasoning
      ↓
 Decision
@@ -410,3 +657,8 @@ Bounded Execution
 Audit
      ↓
 Measurement
+```
+
+> **AI should recommend recovery actions, but deterministic controls should decide what the system is allowed to execute.**
+
+---
