@@ -8,9 +8,9 @@
 
 👉 https://recover-ai-ai-revenue-recovery-agen.vercel.app/
 
-## 💻 GitHub
+## Start the Development Server
 
-👉 https://github.com/PSRIKRUTHIN/RecoverAI-AI-Revenue-Recovery-Agent
+👉 npm run dev
 
 ---
 
