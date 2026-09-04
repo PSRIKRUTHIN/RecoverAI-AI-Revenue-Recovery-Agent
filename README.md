@@ -249,6 +249,25 @@ RecoverAI tracks recovery performance across monitored revenue-risk incidents.
 
 ---
 
+# 📈 Current Demo Results
+
+The deployed RecoverAI demo currently monitors simulated revenue-risk incidents and tracks recovery outcomes.
+
+| Metric | Current Demo |
+|---|---:|
+| **Monitored Risks** | 12 |
+| **Measured Money Recovered** | $2,512 |
+| **Recovery Rate** | 5.3% |
+| **Recovered Accounts** | 4 |
+| **Active Revenue Exposure** | $30,845 |
+| **PTP Commitments** | 2 |
+| **PTP Committed Exposure** | $4,882 |
+| **Committed Recovery Coverage** | 15.6% |
+| **High-Risk Cases Stopped** | 1 |
+| **Protected Exposure** | $4,565 |
+
+> Dashboard amounts are normalized USD-equivalent demo values for cross-currency aggregation. Payment execution is simulated.
+
 # 🤖 AI Architecture
 
 RecoverAI uses **Groq GPT-OSS-20B** for AI-assisted diagnosis.
@@ -624,6 +643,23 @@ RecoverAI follows a safety-first architecture.
 - API keys are stored through environment variables
 
 ---
+
+# 🔮 Future Improvements
+
+RecoverAI is currently a demonstration system. A production version could be extended with:
+
+- 🔗 Real payment-provider and gateway integrations
+- ⚡ Real-time payment failure webhooks
+- 🧠 More advanced customer-level recovery models
+- 📈 Predictive recovery probability scoring
+- ⚙️ Configurable business policies and retry strategies
+- 🔐 Role-based access control and stronger security controls
+- 📊 Production monitoring and alerting
+- 🗄️ Persistent databases for recovery history and audit events
+- 🤖 More specialized recovery agents for different payment channels
+- 🌍 Production-grade multi-currency and regional recovery support
+---
+
 
 # ⚠️ Demo Disclaimer
 
