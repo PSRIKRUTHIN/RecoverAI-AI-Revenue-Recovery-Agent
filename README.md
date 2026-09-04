@@ -65,53 +65,8 @@ Recovery Outcome
 
 # 🏗️ System Architecture
 
-```text
-┌──────────────────────────┐
-│    Revenue Incidents     │
-│ Payments / B2B / UPI     │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│      Risk Detection      │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│      AI Diagnosis        │
-│    Groq GPT-OSS-20B      │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│    Recovery Decision     │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│ Deterministic Safety     │
-│        Engine             │
-│                          │
-│ • Retry limits           │
-│ • Duplicate prevention   │
-│ • Hard-decline stopping  │
-│ • Risk escalation        │
-│ • Audit logging          │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│    Recovery Actions      │
-│                          │
-│ • Payment Retry           │
-│ • Promise-to-Pay          │
-│ • Credential Update       │
-│ • Stop & Escalate         │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│       Audit Trail        │
-└────────────┬─────────────┘
-             ↓
-┌──────────────────────────┐
-│    Recovery Analytics    │
-└──────────────────────────┘
-```
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7a4de5c5-2eeb-4f17-ae35-8001c5bdad67" />
+
 
 ---
 
