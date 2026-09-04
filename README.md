@@ -39,28 +39,27 @@ Failed payments and delayed receivables create significant revenue leakage for b
 
 # 🧠 How It Works
 
+<div align="center">
+
 ```text
 Revenue Incident
        ↓
 Risk Detection
        ↓
 AI Diagnosis
-(Groq GPT-OSS-20B)
        ↓
 Recovery Decision
        ↓
-Deterministic Safety Engine
+Safety Validation
        ↓
-Bounded Intervention
-       ↓
-┌─────────────────────────────────┐
-│ Payment Retry │ PTP │ Escalate │
-└─────────────────────────────────┘
+Bounded Recovery Action
        ↓
 Audit Trail
        ↓
-Recovery Metrics
+Recovery Outcome
 ```
+
+</div>
 
 ---
 
