@@ -1,0 +1,7 @@
+{
+  "name": "AI Revenue Recovery",
+  "description": "Autonomous revenue recovery agent that detects payment failures, abandoned checkouts, and overdue receivables to execute bounded interventions with compliant stopping rules and audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
