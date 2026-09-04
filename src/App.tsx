@@ -521,7 +521,6 @@
 // }
 
 
-
 import React, { useState } from 'react';
 import { initialIncidents } from './data/mockIncidents';
 import { RecoveryIncident } from './types';
@@ -535,6 +534,7 @@ import { PtpTrackerView } from './components/PtpTrackerView';
 import { ComplianceShieldView } from './components/ComplianceShieldView';
 import { VoiceStudioView } from './components/VoiceStudioView';
 import { NewIncidentModal } from './components/NewIncidentModal';
+import { RecoveryCheckout } from './components/RecoveryCheckout';
 import { requestAiDiagnosis } from './services/api';
 import { createAuditEntry, formatCurrency } from './utils/audit';
 import { Sparkles } from 'lucide-react';
@@ -559,6 +559,9 @@ export default function App() {
     useState(false);
 
   const [voiceModalIncident, setVoiceModalIncident] =
+    useState<RecoveryIncident | null>(null);
+
+  const [checkoutIncident, setCheckoutIncident] =
     useState<RecoveryIncident | null>(null);
 
   const [isDiagnosing, setIsDiagnosing] =
@@ -692,6 +695,61 @@ export default function App() {
         incident.amount,
         incident.currency
       )} from ${incident.customerName} via Smart Cascade Retry.`
+    );
+
+    setTimeout(
+      () => setBatchBanner(null),
+      4500
+    );
+  };
+
+  // =========================================================
+  // 1-CLICK FASTLINK RECOVERY
+  // =========================================================
+
+  const handleFastLinkRecovery = (
+    incident: RecoveryIncident
+  ) => {
+    const auditEntry = createAuditEntry(
+      'FASTLINK_RECOVERY_EXECUTED',
+      'SYSTEM_GATEWAY',
+      `One-click recovery checkout completed for ${incident.customerName}. Simulated settlement confirmed.`,
+      'Single bounded recovery nudge executed through secure demo checkout.',
+      incident.amount
+    );
+
+    const updated: RecoveryIncident = {
+      ...incident,
+      status: 'recovered',
+      recoveredAmount: incident.amount,
+      recoveredAt: new Date().toISOString(),
+      auditTrail: [
+        auditEntry,
+        ...incident.auditTrail,
+      ],
+    };
+
+    setIncidents((prev) =>
+      prev.map((item) =>
+        item.id === incident.id
+          ? updated
+          : item
+      )
+    );
+
+    if (
+      selectedIncident?.id === incident.id
+    ) {
+      setSelectedIncident(updated);
+    }
+
+    setCheckoutIncident(null);
+
+    setBatchBanner(
+      `Recovered ${formatCurrency(
+        incident.amount,
+        incident.currency
+      )} from ${incident.customerName} via 1-Click FastLink.`
     );
 
     setTimeout(
@@ -1018,6 +1076,7 @@ export default function App() {
   const handleResetData = () => {
     setIncidents(initialIncidents);
     setSelectedIncident(null);
+    setCheckoutIncident(null);
 
     setBatchBanner(
       'Reset to benchmark baseline dataset.'
@@ -1136,6 +1195,9 @@ export default function App() {
                 }
                 onClose={() =>
                   setSelectedIncident(null)
+                }
+                onOpenFastLink={(inc) =>
+                  setCheckoutIncident(inc)
                 }
                 onDiagnoseWithAi={
                   handleDiagnoseWithAi
@@ -1261,6 +1323,22 @@ export default function App() {
         )}
 
       </main>
+
+      {/* ===================================================
+          1-CLICK FASTLINK CHECKOUT
+      =================================================== */}
+
+      {checkoutIncident && (
+        <RecoveryCheckout
+          incident={checkoutIncident}
+          onClose={() =>
+            setCheckoutIncident(null)
+          }
+          onPaymentRecovered={
+            handleFastLinkRecovery
+          }
+        />
+      )}
 
       {/* ===================================================
           VOICE SIMULATOR MODAL

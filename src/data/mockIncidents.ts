@@ -36,7 +36,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Tomorrow at 09:30 AM IST (Post-banking clearing window)',
       escalationStage: 2,
       regulatoryFramework: 'RBI UPI AutoPay Framework & TRAI Telecom Commercial Communications Regulations',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -92,7 +92,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Tuesday at 10:15 AM EST (AP weekly payment run schedule)',
       escalationStage: 2,
       regulatoryFramework: 'Commercial Prompt Payment Guidelines & B2B Accounting Standards',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -155,7 +155,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Friday Sept 5th at 06:45 AM (Immediate post-direct deposit)',
       escalationStage: 1,
       regulatoryFramework: 'PCI-DSS Recurring Billing Guardrails & Fair Consumer Practice',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -210,7 +210,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Immediate dispatch (Cart reserve valid for 6 hours)',
       escalationStage: 1,
       regulatoryFramework: 'TRAI Anti-Spam Guidelines & E-Commerce Consumer Protection',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -257,7 +257,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Settled via cascade retry',
       escalationStage: 1,
       regulatoryFramework: 'Visa & Mastercard Scheme Resubmission Compliance Rules',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -319,7 +319,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Halted - Awaiting manual customer credential update',
       escalationStage: 4,
       regulatoryFramework: 'PCI DSS Requirement 3.4 & European PSD2 Security Mandates',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -374,7 +374,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Executed successfully on Sept 2nd',
       escalationStage: 2,
       regulatoryFramework: 'NPCI UPI AutoPay Operating Guidelines',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -437,7 +437,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Thursday 11:00 AM GMT (Finance controller review block)',
       escalationStage: 3,
       regulatoryFramework: 'UK Late Payment of Commercial Debts Regulations 2013',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -491,7 +491,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Dispatched in 15 minutes',
       escalationStage: 1,
       regulatoryFramework: 'GDPR Recital 47 & French Consumer Code',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -555,7 +555,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Today at 02:30 PM IST',
       escalationStage: 2,
       regulatoryFramework: 'RBI Card Tokenization (CoFT) Regulations & TRAI TCCCPR',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -602,7 +602,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Executed at 01:10 AM EST',
       escalationStage: 0,
       regulatoryFramework: 'Card Network Latency Tolerant Retry Protocols',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
@@ -664,7 +664,7 @@ export const initialIncidents: RecoveryIncident[] = [
       smartRetrySchedule: 'Tranche 1 debited on Sept 8th 09:00 AEST',
       escalationStage: 2,
       regulatoryFramework: 'Australian Consumer Law & ASIC B2B Fair Debt Collection Guidelines',
-      aiModel: 'Gemini 3.8 Flash',
+      aiModel: 'Groq — GPT-OSS-20B',
     },
     auditTrail: [
       {
