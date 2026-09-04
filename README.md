@@ -65,7 +65,8 @@ Recovery Outcome
 
 # 🏗️ System Architecture
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7a4de5c5-2eeb-4f17-ae35-8001c5bdad67" />
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/565bcf6a-1604-451d-9ee3-3a963b6a7423" />
+
 
 
 ---
