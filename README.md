@@ -13,7 +13,6 @@
 ```bash
 npm run dev
 
----
 
 ## 🎯 What is RecoverAI?
 
