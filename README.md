@@ -39,27 +39,7 @@ Failed payments and delayed receivables create significant revenue leakage for b
 
 # 🧠 How It Works
 
-<div align="center">
-
-```text
-Revenue Incident
-       ↓
-Risk Detection
-       ↓
-AI Diagnosis
-       ↓
-Recovery Decision
-       ↓
-Safety Validation
-       ↓
-Bounded Recovery Action
-       ↓
-Audit Trail
-       ↓
-Recovery Outcome
-```
-
-</div>
+<img width="1149" height="1369" alt="image" src="https://github.com/user-attachments/assets/b78f0b85-24ae-438a-91ab-bd9457a6b073" />
 
 ---
 
