@@ -346,7 +346,7 @@ For demonstration purposes, dashboard values can be normalized into USD-equivale
 ## AI
 
 - Groq
-- GPT-OSS-20B
+- OpenAI GPT-OSS-20B via Groq
 
 ## Development & Deployment
 
@@ -597,9 +597,6 @@ RecoverAI is currently a demonstration system. A production version could be ext
 
 ---
 
-# ⚠️ Demo Disclaimer
-
-RecoverAI is a demonstration system built for the **Razorpay AI Builder Internship 2026 — Track 03: AI Revenue Recovery**.
 
 ### Important limitations
 
