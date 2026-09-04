@@ -463,7 +463,7 @@ Make sure you have:
 ## 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/PSRIKRUTHIN/RecoverAI-AI-Revenue-Recovery-Agent
 
 cd RecoverAI-AI-Revenue-Recovery-Agent
 ```
