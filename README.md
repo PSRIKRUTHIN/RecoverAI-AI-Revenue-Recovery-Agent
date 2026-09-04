@@ -239,7 +239,7 @@ RecoverAI tracks recovery performance across monitored revenue-risk incidents.
 | Metric | Description |
 |---|---|
 | **Revenue Recovered** | Successfully recovered revenue |
-| **Recovery Rate** | Percentage of recoverable revenue recovered |
+| **Recovery Rate** | Percentage of monitored recovery opportunity recovered |
 | **Recovered Accounts** | Accounts successfully recovered |
 | **Active Revenue Exposure** | Revenue currently at risk |
 | **PTP Commitments** | Promise-to-Pay commitments |
