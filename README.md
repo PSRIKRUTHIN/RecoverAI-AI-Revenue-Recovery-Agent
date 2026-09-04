@@ -8,9 +8,10 @@
 
 👉 https://recover-ai-ai-revenue-recovery-agen.vercel.app/
 
-## Start the Development Server(For Local Host)
+## 💻 Start the Development Server (Local Host)
 
-👉 npm run dev
+```bash
+npm run dev
 
 ---
 
