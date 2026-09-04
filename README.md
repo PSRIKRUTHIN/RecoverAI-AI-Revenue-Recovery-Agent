@@ -205,7 +205,7 @@ The deployed RecoverAI demo currently monitors simulated revenue-risk incidents 
 
 # 🤖 AI Architecture
 
-RecoverAI uses **Groq GPT-OSS-20B** for AI-assisted diagnosis.
+RecoverAI uses **OpenAI GPT-OSS-20B via Groq** for AI-assisted diagnosis.
 
 The model analyzes incident context such as:
 
