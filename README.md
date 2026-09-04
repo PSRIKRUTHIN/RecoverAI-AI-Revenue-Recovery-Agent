@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-RecoverAI is an AI Revenue Recovery Agent built for **Razorpay AI Builder Internship 2026 — Track 03: AI Revenue Recovery**.
+RecoverAI is an AI Revenue Recovery Agent built for the **Razorpay AI Builder Internship 2026 — Track 03: AI Revenue Recovery**.
 
 The system identifies revenue that is at risk because of payment failures, mandate issues, insufficient funds, expired cards, hard declines, B2B procurement holds, and other recovery scenarios.
 
@@ -20,13 +20,13 @@ Failed payments and delayed receivables can create significant revenue leakage.
 
 A recovery system needs to answer:
 
-1. Which revenue is currently at risk?
-2. Why did the payment or collection fail?
-3. What recovery action is appropriate?
-4. Should the system retry, create a Promise-to-Pay commitment, request a credential update, or escalate?
-5. When should the agent stop acting?
+- Which revenue is currently at risk?
+- Why did the payment or collection fail?
+- What recovery action is appropriate?
+- Should the system retry, create a Promise-to-Pay commitment, request a credential update, or escalate?
+- When should the agent stop acting?
 
-RecoverAI addresses these questions through an AI-assisted but safety-bounded workflow.
+RecoverAI addresses these questions through an **AI-assisted but safety-bounded workflow**.
 
 ---
 
@@ -49,13 +49,3 @@ Bounded Intervention
 Recovery / PTP / Escalation
        ↓
 Audit Trail
-
-## ⚙️ Run Locally
-
-**Prerequisites:** Node.js
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/PSRIKRUTHIN/RecoverAI-AI-Revenue-Recovery-Agent.git
-cd RecoverAI-AI-Revenue-Recovery-Agent
