@@ -453,7 +453,7 @@ npm run dev
 Open the application at:
 
 ```text
-http://localhost:5173
+http://localhost:3000
 ```
 
 ---
