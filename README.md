@@ -45,7 +45,8 @@ Failed payments and delayed receivables create significant revenue leakage for b
 
 # 🏗️ System Architecture
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/565bcf6a-1604-451d-9ee3-3a963b6a7423" />
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/63218e12-20db-4768-977d-e59b2bc127b3" />
+
 
 
 
