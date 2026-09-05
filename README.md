@@ -39,7 +39,8 @@ Failed payments and delayed receivables create significant revenue leakage for b
 
 # 🧠 How It Works
 
-<img width="1149" height="1369" alt="image" src="https://github.com/user-attachments/assets/b78f0b85-24ae-438a-91ab-bd9457a6b073" />
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/f26c92ec-0eec-4b77-932f-7889488f5b98" />
+
 
 ---
 
